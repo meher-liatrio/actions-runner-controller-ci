@@ -1,9 +1,11 @@
 apiVersion: actions.summerwind.dev/v1alpha1
 kind: RunnerDeployment
 metadata:
-  name: example-runnerdeploy
+  name: runnerdeploy
+  labels:
+    Runner: {{ .Values.runner }}
 spec:
   replicas: 1
   template:
     spec:
-      repository: meher-liatrio/actions-runner-controller-ci
+      repository: {{ .Values.repository }}

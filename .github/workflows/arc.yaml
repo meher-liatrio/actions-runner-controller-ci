@@ -1,0 +1,10 @@
+#create an example workflow
+name: hello
+on: [push, workflow_dispatch]
+
+jobs:
+  Hello-World:
+    runs-on: self-hosted
+    steps:
+      - name: Print Hello World
+        run: echo "Hello World"
